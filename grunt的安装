@@ -315,3 +315,12 @@ karma——前端自动化测试工具
 　　上图中，“src”文件夹里面存储的是原始的代码文件，“dist”文件夹里面存储的是最终生成的代码文件，“demo”里面存储的是一些测试页面。
 
 　　当然了，各个系统的文件组织形式不一样，但是我建议大家还是按照这么一个思想去组织文档结构。大家也可以去github上参考一下jquery、bootstrap这些著名开源项目的文档结构。看看jquery输出的虽然是简单的一个js文件，但是它的开发环境是多么的复杂。
+
+grunt-contrib-qunit安装过程中phantomjs安装报错问题解决
+解决方式可以进行手动下载（http://pan.baidu.com/s/1hqwZmTI）windows版本，
+然后按照给出的错误提示地址将其放在相应的目录下，一般情况下进入这个项目的主目录，
+比如我的C:\Users\thinkpad\Desktop\grunttest\jquery-tiny-pubsub\node_modules后
+，因为安装失败是不会有grunt-contrib-qunit这个目录的，但是当你在项目主目录下运行npm install之后，
+它会按照你的package.json去安装里面的插件，所以会生成一个grunt-contrib-qunit目录，但是当你安装失败之后，
+这个目录随即被删除，所以你需要第一次运行npm install的时候拷贝这个自动生成的目录，放在某个地方，
+然后按照以下路径将你手动下载的ZIp包加进去
